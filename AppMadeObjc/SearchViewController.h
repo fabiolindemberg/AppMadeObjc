@@ -15,5 +15,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfSearchText;
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 
+@property (weak, nonatomic) IBOutlet UIStackView *rootStackView;
+@property (weak, nonatomic) IBOutlet UIStackView *searchStackView;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *madeInWebLogoHeight;
 @end
 

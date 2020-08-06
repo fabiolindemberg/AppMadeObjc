@@ -126,8 +126,12 @@
                     <connections>
                         <outlet property="btnSearch" destination="5vt-vT-Ueh" id="5n7-kA-qod"/>
                         <outlet property="imgLogo" destination="Xl7-dK-VWX" id="xgV-G1-miF"/>
+                        <outlet property="madeInWebLogoHeight" destination="q23-Ab-JOm" id="XKG-qx-NZG"/>
+                        <outlet property="rootStackView" destination="8x8-oZ-UdS" id="CkX-7B-Ijb"/>
+                        <outlet property="searchStackView" destination="peW-uZ-yTe" id="BCg-cM-7n2"/>
                         <outlet property="tbResults" destination="ZuD-in-rwF" id="vSt-of-XSe"/>
                         <outlet property="tfSearchText" destination="wHi-ju-J9P" id="dfV-gO-rqP"/>
+                        <outlet property="topConstraint" destination="xAK-ty-OXx" id="gAJ-FV-RfJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXM-24-x4L" sceneMemberID="firstResponder"/>

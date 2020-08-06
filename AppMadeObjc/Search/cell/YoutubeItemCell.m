@@ -7,6 +7,7 @@
 //
 
 #import "YoutubeItemCell.h"
+#import <SDWebImage/SDWebImage.h>
 
 @implementation YoutubeItemCell
 
@@ -22,7 +23,8 @@
 }
 
 - (void) loadCell: (YoutubeItem*) youtubeItem{
-//    self.imgItemImage
+    NSURL *url = [[NSURL alloc] initWithString: youtubeItem.snippet.thumbnails.medium.url];
+    [self.imgItemImage sd_setImageWithURL: url];
     self.lblItemTitle.text = youtubeItem.snippet.title;
     self.lblItemDescription.text = youtubeItem.snippet.desc;
 }

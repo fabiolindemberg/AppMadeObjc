@@ -54,6 +54,19 @@ SearchPresenter *_presenter;
     
     NSString *searchParameters = @"HDFIT";
     [_presenter fetchListWithSearchParameter: searchParameters];
+    
+    [UIView animateWithDuration: 1.0 animations:^{
+        [self setupShowResultsModeAppearence];
+    }];
+}
+
+- (void) setupShowResultsModeAppearence {
+    self.topConstraint.constant = 8;
+    self.rootStackView.spacing = 24;
+    self.madeInWebLogoHeight.constant = 32;
+    
+    self.searchStackView.axis = UIAxisHorizontal;
+    self.searchStackView.spacing = 0;
 }
 
 #pragma mark - SearchPresenterDelegate
