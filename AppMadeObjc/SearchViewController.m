@@ -18,6 +18,7 @@
 @implementation SearchViewController
 
 SearchPresenter *_presenter;
+UIActivityIndicatorView *_activityIndicator;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,12 +43,21 @@ SearchPresenter *_presenter;
     [super viewDidDisappear: animated];
 }
 
-
 #pragma mark - Custom Methods
 
 - (void) configUI {
     self.tbResults.dataSource = self;
     self.tbResults.delegate = self;
+    
+    [self congitActivityIndicator];
+}
+
+- (void) congitActivityIndicator {
+    
+    _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleLarge];
+    [_activityIndicator setTintColor: [UIColor grayColor]];
+    _activityIndicator.hidesWhenStopped = YES;
+    self.tbResults.backgroundView = _activityIndicator;
 }
 
 - (IBAction)search:(id)sender {
@@ -61,23 +71,28 @@ SearchPresenter *_presenter;
 }
 
 - (void) setupShowResultsModeAppearence {
+    
     self.topConstraint.constant = 8;
     self.rootStackView.spacing = 24;
     self.madeInWebLogoHeight.constant = 32;
     
     self.searchStackView.axis = UIAxisHorizontal;
     self.searchStackView.spacing = 0;
+    [self.searchStackView layoutIfNeeded];
 }
 
 #pragma mark - SearchPresenterDelegate
 
 - (void)loading:(BOOL)isLoading {
-    // code goes here
-    NSLog(@"%@", isLoading ? @"Start loagind" : @"Stop loading");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_activityIndicator startAnimating];
+    });
 }
 
 - (void)dataLoaded {
+
     dispatch_async(dispatch_get_main_queue(), ^{
+        [_activityIndicator stopAnimating];
         [self.tbResults reloadData];
     });
 }
