@@ -10,10 +10,11 @@
 #import "SearchManager.h"
 #import "ServiceError.h"
 #import "SearchParameter.h"
+#import "SearchRouter.h"
 
 @implementation SearchPresenter
 
-id<SearchPresenterDelegate> _delegate;
+id<SearchPresenterDelegate> _detail;
 NSMutableArray<YoutubeItem*> *_list;
 SearchParameter *searchParameter;
 
@@ -22,7 +23,7 @@ SearchParameter *searchParameter;
     self = [super init];
     
     if (self) {
-        _delegate = delegate;
+        _detail = delegate;
         
         searchParameter = [SearchParameter new];
         
@@ -40,13 +41,13 @@ SearchParameter *searchParameter;
                                         onSucess:^(NSArray<YoutubeItem*> * _Nonnull youtubeItens) {
         [_list addObjectsFromArray: youtubeItens];
         
-        [_delegate dataLoaded];
+        [_detail dataLoaded];
 
-        [_delegate  showMessage: @"It works@"
+        [_detail  showMessage: @"It works@"
                             andType: @"success"];
         }
          onError:^(ServiceError * _Nonnull serviceError) {
-            [_delegate  showMessage: serviceError.message
+            [_detail  showMessage: serviceError.message
                             andType: @"error"];
         }
     ];
@@ -59,5 +60,11 @@ SearchParameter *searchParameter;
 - (YoutubeItem*)getItemAtIndex:(NSInteger)index {
     return _list[index];
 }
+
+- (void) pushDetailAtIndex:(NSInteger)index {
+    
+    [SearchRouter pushDetailWithIdentifier: [_list objectAtIndex: index].identifier.videoId];
+}
+
 
 @end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,12 +15,18 @@
 		492A9D1B24DC191000747211 /* YoutubeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492A9D1A24DC191000747211 /* YoutubeItemCell.m */; };
 		49350D1124D4EC0400E4637D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49350D1024D4EC0400E4637D /* AppDelegate.m */; };
 		49350D1424D4EC0400E4637D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49350D1324D4EC0400E4637D /* SceneDelegate.m */; };
-		49350D1724D4EC0400E4637D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49350D1624D4EC0400E4637D /* SearchViewController.m */; };
 		49350D1A24D4EC0400E4637D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49350D1824D4EC0400E4637D /* Main.storyboard */; };
 		49350D1C24D4EC0600E4637D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49350D1B24D4EC0600E4637D /* Assets.xcassets */; };
 		49350D1F24D4EC0600E4637D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49350D1D24D4EC0600E4637D /* LaunchScreen.storyboard */; };
 		49350D2224D4EC0600E4637D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49350D2124D4EC0600E4637D /* main.m */; };
 		49350D2C24D4EC0600E4637D /* AppMadeObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49350D2B24D4EC0600E4637D /* AppMadeObjcTests.m */; };
+		49CAFA6B24DCC18B00128413 /* DetailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA6A24DCC18B00128413 /* DetailManager.m */; };
+		49CAFA6E24DCC31200128413 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA6C24DCC31200128413 /* SearchViewController.m */; };
+		49CAFA7124DCC5C800128413 /* DetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA7024DCC5C800128413 /* DetailPresenter.m */; };
+		49CAFA7424DCC9AE00128413 /* DetailRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA7324DCC9AE00128413 /* DetailRouter.m */; };
+		49CAFA7724DCC9F100128413 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA7624DCC9F100128413 /* DetailViewController.m */; };
+		49CAFA7A24DCCF4800128413 /* SearchRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA7924DCCF4800128413 /* SearchRouter.m */; };
+		49CAFA7E24DCD1E300128413 /* UIApplication+TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CAFA7D24DCD1E300128413 /* UIApplication+TopViewController.m */; };
 		49EC07BD24DA5C9500034C5E /* ServiceError.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EC07BC24DA5C9500034C5E /* ServiceError.m */; };
 		647A9C1F11B34388450BFF36 /* Pods_AppMadeObjcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710D8C601CE63E36FA923492 /* Pods_AppMadeObjcTests.framework */; };
 		91CA3EFF32F29DBDB642433A /* Pods_AppMadeObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99166CF0E7E0C2333AFFC1EE /* Pods_AppMadeObjc.framework */; };
@@ -55,8 +61,6 @@
 		49350D1024D4EC0400E4637D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49350D1224D4EC0400E4637D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		49350D1324D4EC0400E4637D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		49350D1524D4EC0400E4637D /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = ../SearchViewController.h; sourceTree = "<group>"; };
-		49350D1624D4EC0400E4637D /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../SearchViewController.m; sourceTree = "<group>"; };
 		49350D1924D4EC0400E4637D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49350D1B24D4EC0600E4637D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49350D1E24D4EC0600E4637D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +69,20 @@
 		49350D2724D4EC0600E4637D /* AppMadeObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppMadeObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49350D2B24D4EC0600E4637D /* AppMadeObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMadeObjcTests.m; sourceTree = "<group>"; };
 		49350D2D24D4EC0600E4637D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49CAFA6924DCC18B00128413 /* DetailManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailManager.h; sourceTree = "<group>"; };
+		49CAFA6A24DCC18B00128413 /* DetailManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailManager.m; sourceTree = "<group>"; };
+		49CAFA6C24DCC31200128413 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		49CAFA6D24DCC31200128413 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		49CAFA6F24DCC5C800128413 /* DetailPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailPresenter.h; sourceTree = "<group>"; };
+		49CAFA7024DCC5C800128413 /* DetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailPresenter.m; sourceTree = "<group>"; };
+		49CAFA7224DCC9AE00128413 /* DetailRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailRouter.h; sourceTree = "<group>"; };
+		49CAFA7324DCC9AE00128413 /* DetailRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailRouter.m; sourceTree = "<group>"; };
+		49CAFA7524DCC9F100128413 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		49CAFA7624DCC9F100128413 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		49CAFA7824DCCF4800128413 /* SearchRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchRouter.h; sourceTree = "<group>"; };
+		49CAFA7924DCCF4800128413 /* SearchRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchRouter.m; sourceTree = "<group>"; };
+		49CAFA7C24DCD1E300128413 /* UIApplication+TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TopViewController.h"; sourceTree = "<group>"; };
+		49CAFA7D24DCD1E300128413 /* UIApplication+TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TopViewController.m"; sourceTree = "<group>"; };
 		49EC07BB24DA5C9500034C5E /* ServiceError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceError.h; sourceTree = "<group>"; };
 		49EC07BC24DA5C9500034C5E /* ServiceError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceError.m; sourceTree = "<group>"; };
 		556FD0CC04713A4D5E4AC221 /* Pods-AppMadeObjcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMadeObjcTests.debug.xcconfig"; path = "Target Support Files/Pods-AppMadeObjcTests/Pods-AppMadeObjcTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +129,6 @@
 				556FD0CC04713A4D5E4AC221 /* Pods-AppMadeObjcTests.debug.xcconfig */,
 				88F7C72AB9C54142120327FC /* Pods-AppMadeObjcTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,12 +145,14 @@
 			isa = PBXGroup;
 			children = (
 				492A9D1824DC189500747211 /* cell */,
-				49350D1524D4EC0400E4637D /* SearchViewController.h */,
-				49350D1624D4EC0400E4637D /* SearchViewController.m */,
+				49CAFA6D24DCC31200128413 /* SearchViewController.h */,
+				49CAFA6C24DCC31200128413 /* SearchViewController.m */,
 				492A9D1524DC125F00747211 /* SearchManager.h */,
 				492A9D1624DC125F00747211 /* SearchManager.m */,
 				492356CC24D8A6BA00A4D35E /* SearchPresenter.h */,
 				492356CD24D8A6BA00A4D35E /* SearchPresenter.m */,
+				49CAFA7824DCCF4800128413 /* SearchRouter.h */,
+				49CAFA7924DCCF4800128413 /* SearchRouter.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -170,10 +189,11 @@
 		49350D0E24D4EC0400E4637D /* AppMadeObjc */ = {
 			isa = PBXGroup;
 			children = (
+				49CAFA7B24DCD1CB00128413 /* classes */,
+				49CAFA6824DCC12B00128413 /* Modules */,
 				49EC07BA24DA5C7100034C5E /* Entities */,
 				492356C724D8344200A4D35E /* Service */,
 				49350D3624D5D58200E4637D /* Application */,
-				492356CB24D8A69700A4D35E /* Search */,
 				49350D1824D4EC0400E4637D /* Main.storyboard */,
 			);
 			path = AppMadeObjc;
@@ -201,6 +221,39 @@
 				49350D2124D4EC0600E4637D /* main.m */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		49CAFA6724DCC11E00128413 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				49CAFA6924DCC18B00128413 /* DetailManager.h */,
+				49CAFA6A24DCC18B00128413 /* DetailManager.m */,
+				49CAFA6F24DCC5C800128413 /* DetailPresenter.h */,
+				49CAFA7024DCC5C800128413 /* DetailPresenter.m */,
+				49CAFA7224DCC9AE00128413 /* DetailRouter.h */,
+				49CAFA7324DCC9AE00128413 /* DetailRouter.m */,
+				49CAFA7524DCC9F100128413 /* DetailViewController.h */,
+				49CAFA7624DCC9F100128413 /* DetailViewController.m */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		49CAFA6824DCC12B00128413 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				49CAFA6724DCC11E00128413 /* Details */,
+				492356CB24D8A69700A4D35E /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		49CAFA7B24DCD1CB00128413 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				49CAFA7C24DCD1E300128413 /* UIApplication+TopViewController.h */,
+				49CAFA7D24DCD1E300128413 /* UIApplication+TopViewController.m */,
+			);
+			path = classes;
 			sourceTree = "<group>";
 		};
 		49EC07BA24DA5C7100034C5E /* Entities */ = {
@@ -383,17 +436,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CAFA7A24DCCF4800128413 /* SearchRouter.m in Sources */,
 				492A9D1424DBB0C300747211 /* SearchParameter.m in Sources */,
 				492A9D1B24DC191000747211 /* YoutubeItemCell.m in Sources */,
+				49CAFA7E24DCD1E300128413 /* UIApplication+TopViewController.m in Sources */,
 				49EC07BD24DA5C9500034C5E /* ServiceError.m in Sources */,
-				49350D1724D4EC0400E4637D /* SearchViewController.m in Sources */,
 				492A9D1724DC125F00747211 /* SearchManager.m in Sources */,
 				49350D1124D4EC0400E4637D /* AppDelegate.m in Sources */,
+				49CAFA7724DCC9F100128413 /* DetailViewController.m in Sources */,
+				49CAFA7424DCC9AE00128413 /* DetailRouter.m in Sources */,
 				49350D2224D4EC0600E4637D /* main.m in Sources */,
 				492A9D1124DB5F9200747211 /* YoutubeItem.m in Sources */,
+				49CAFA6B24DCC18B00128413 /* DetailManager.m in Sources */,
 				49350D1424D4EC0400E4637D /* SceneDelegate.m in Sources */,
 				492356CE24D8A6BA00A4D35E /* SearchPresenter.m in Sources */,
+				49CAFA6E24DCC31200128413 /* SearchViewController.m in Sources */,
 				492356CA24D8344F00A4D35E /* YoutubeService.m in Sources */,
+				49CAFA7124DCC5C800128413 /* DetailPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

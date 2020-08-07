@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="nsR-oP-1yx">
             <objects>
-                <viewController id="ten-NS-Akn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier=" DetailView" id="ten-NS-Akn" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKx-qC-cWS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,6 +196,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gzv-DO-RYe"/>
                     </view>
+                    <connections>
+                        <outlet property="imgVideo" destination="mU0-Oq-BoG" id="ECQ-NQ-2iX"/>
+                        <outlet property="lblDescription" destination="Reo-yv-aij" id="RXI-Uk-tSU"/>
+                        <outlet property="lblTitle" destination="zLx-44-QzK" id="9pY-1Y-Jgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfY-MR-mNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,10 +19,10 @@ const int pageSize = 15;
  static let shared = YoutubeService()
  */
 
-+ (void) fetchDetailById: (NSString *) idd
-completion: (void (^)(NSData* item)) completion {
++ (void) fetchDetailByIdentifier: (NSString *) identifier
+completion: (void (^)(NSData* data)) completion {
     
-    NSString *endpoint = [[NSString alloc] initWithFormat: @"videos?id=%@&part=snippet,statistics&key=%@", idd, API_TOKEN];
+    NSString *endpoint = [[NSString alloc] initWithFormat: @"videos?id=%@&part=snippet,statistics&key=%@", identifier, API_TOKEN];
     
     NSURL *url = [[NSURL alloc] initWithString: [[NSString alloc] initWithFormat: @"%@%@", BASE_URL, endpoint]];
     

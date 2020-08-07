@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) fetchListWithSearchParameter: (NSString *) searchText;
 - (NSInteger) getNumberOfItems;
 - (YoutubeItem*) getItemAtIndex: (NSInteger) index;
+
+- (void) pushDetailAtIndex:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

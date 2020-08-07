@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YoutubeService : NSObject
 
-+ (void) fetchDetailById: (NSString *) idd
-              completion: (void (^)(NSData* item)) completion;
++ (void) fetchDetailByIdentifier: (NSString *) idd
+                      completion: (void (^)(NSData* data)) completion;
 
 + (void)fetchListWithSearchParameter: (SearchParameter *) searchParameter
                           completion: (void (^)(NSData* item)) completion;
