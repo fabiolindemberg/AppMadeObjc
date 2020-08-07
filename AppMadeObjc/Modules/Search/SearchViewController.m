@@ -62,12 +62,14 @@ UIActivityIndicatorView *_activityIndicator;
 
 - (IBAction)search:(id)sender {
     
-    NSString *searchParameters = @"HDFIT";
-    [_presenter fetchListWithSearchParameter: searchParameters];
-    
-    [UIView animateWithDuration: 1.0 animations:^{
-        [self setupShowResultsModeAppearence];
-    }];
+    if (![self.tfSearchText.text isEqualToString: @""]) {
+        NSString *searchParameters = self.tfSearchText.text;
+        [_presenter fetchListWithSearchParameter: searchParameters];
+        
+        [UIView animateWithDuration: 1.0 animations:^{
+            [self setupShowResultsModeAppearence];
+        }];
+    }
 }
 
 - (void) setupShowResultsModeAppearence {
@@ -98,9 +100,6 @@ UIActivityIndicatorView *_activityIndicator;
 }
 
 - (void)showMessage:(NSString *)message andType:(NSString *)type {
-    // code goes here
-    
-    NSLog(@"%@: %@", type, message);
 
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([type isEqualToString: @"error"]) {
@@ -131,6 +130,13 @@ UIActivityIndicatorView *_activityIndicator;
     [cell loadCell: [_presenter getItemAtIndex: indexPath.row]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    
+    [_presenter pushDetailAtIndex: indexPath.row];
 }
 
 @end
